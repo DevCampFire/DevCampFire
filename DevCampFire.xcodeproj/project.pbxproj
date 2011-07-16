@@ -205,18 +205,6 @@
 		2EA5109A13D1EBEE00CAA8E6 = {
 			isa = PBXGroup;
 			children = (
-				3D2B074D13D1F4BF00014D10 /* CFNetwork.framework */,
-				3D2B074E13D1F4BF00014D10 /* CoreData.framework */,
-				3D2B074F13D1F4BF00014D10 /* libxml2.dylib */,
-				3D2B075013D1F4BF00014D10 /* MobileCoreServices.framework */,
-				3D2B075113D1F4BF00014D10 /* SystemConfiguration.framework */,
-				3D2B073F13D1F48D00014D10 /* libRestKitCoreData.a */,
-				3D2B074013D1F48D00014D10 /* libRestKitJSONParserJSONKit.a */,
-				3D2B074113D1F48D00014D10 /* libRestKitJSONParserSBJSON.a */,
-				3D2B074213D1F48D00014D10 /* libRestKitJSONParserYAJL.a */,
-				3D2B074313D1F48D00014D10 /* libRestKitNetwork.a */,
-				3D2B074413D1F48D00014D10 /* libRestKitObjectMapping.a */,
-				3D2B074513D1F48D00014D10 /* libRestKitSupport.a */,
 				2EA510B113D1EBEF00CAA8E6 /* DevCampFire */,
 				2EA510CF13D1EBEF00CAA8E6 /* DevCampFireTests */,
 				2EA510A813D1EBEF00CAA8E6 /* Frameworks */,
@@ -237,6 +225,18 @@
 		2EA510A813D1EBEF00CAA8E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D2B074D13D1F4BF00014D10 /* CFNetwork.framework */,
+				3D2B074E13D1F4BF00014D10 /* CoreData.framework */,
+				3D2B074F13D1F4BF00014D10 /* libxml2.dylib */,
+				3D2B075013D1F4BF00014D10 /* MobileCoreServices.framework */,
+				3D2B075113D1F4BF00014D10 /* SystemConfiguration.framework */,
+				3D2B073F13D1F48D00014D10 /* libRestKitCoreData.a */,
+				3D2B074013D1F48D00014D10 /* libRestKitJSONParserJSONKit.a */,
+				3D2B074113D1F48D00014D10 /* libRestKitJSONParserSBJSON.a */,
+				3D2B074213D1F48D00014D10 /* libRestKitJSONParserYAJL.a */,
+				3D2B074313D1F48D00014D10 /* libRestKitNetwork.a */,
+				3D2B074413D1F48D00014D10 /* libRestKitObjectMapping.a */,
+				3D2B074513D1F48D00014D10 /* libRestKitSupport.a */,
 				2ECB466F13D2110800D5B13E /* MapKit.framework */,
 				2EA510A913D1EBEF00CAA8E6 /* UIKit.framework */,
 				2EA510AB13D1EBEF00CAA8E6 /* Foundation.framework */,
