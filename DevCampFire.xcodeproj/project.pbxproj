@@ -40,6 +40,12 @@
 		3DE6692A13D215FE005B154F /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE6692813D215FE005B154F /* SignInViewController.xib */; };
 		3DE6692E13D218C9005B154F /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6692C13D218C9005B154F /* RegisterViewController.m */; };
 		3DE6692F13D218C9005B154F /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE6692D13D218C9005B154F /* RegisterViewController.xib */; };
+		BFD59B2F13D218FA00BEA83C /* DevCampFireBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD59B2B13D218FA00BEA83C /* DevCampFireBlack.png */; };
+		BFD59B3013D218FA00BEA83C /* DevCampFireBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD59B2C13D218FA00BEA83C /* DevCampFireBlue.png */; };
+		BFD59B3113D218FA00BEA83C /* DevCampFirePurple.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD59B2D13D218FA00BEA83C /* DevCampFirePurple.png */; };
+		BFD59B3213D218FA00BEA83C /* DevCampFireRed.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD59B2E13D218FA00BEA83C /* DevCampFireRed.png */; };
+		BFD59B3913D21A2200BEA83C /* DevCampFireGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD59B3713D21A2200BEA83C /* DevCampFireGreen.png */; };
+		BFD59B3A13D21A2200BEA83C /* DevCampFireOrange.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD59B3813D21A2200BEA83C /* DevCampFireOrange.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +177,12 @@
 		3DE6692B13D218C9005B154F /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		3DE6692C13D218C9005B154F /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		3DE6692D13D218C9005B154F /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		BFD59B2B13D218FA00BEA83C /* DevCampFireBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevCampFireBlack.png; sourceTree = "<group>"; };
+		BFD59B2C13D218FA00BEA83C /* DevCampFireBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevCampFireBlue.png; sourceTree = "<group>"; };
+		BFD59B2D13D218FA00BEA83C /* DevCampFirePurple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevCampFirePurple.png; sourceTree = "<group>"; };
+		BFD59B2E13D218FA00BEA83C /* DevCampFireRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevCampFireRed.png; sourceTree = "<group>"; };
+		BFD59B3713D21A2200BEA83C /* DevCampFireGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevCampFireGreen.png; sourceTree = "<group>"; };
+		BFD59B3813D21A2200BEA83C /* DevCampFireOrange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevCampFireOrange.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +278,7 @@
 				2EA510BD13D1EBEF00CAA8E6 /* MainWindow.xib */,
 				2EA510C013D1EBEF00CAA8E6 /* DevCampFire.xcdatamodeld */,
 				2EA510B213D1EBEF00CAA8E6 /* Supporting Files */,
+				BFD59B2A13D218FA00BEA83C /* Assets */,
 				3DE6692613D215FE005B154F /* SignInViewController.h */,
 				3DE6692713D215FE005B154F /* SignInViewController.m */,
 				3DE6692813D215FE005B154F /* SignInViewController.xib */,
@@ -322,6 +335,19 @@
 				3D2B073C13D1F3CA00014D10 /* UISpec.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BFD59B2A13D218FA00BEA83C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BFD59B2B13D218FA00BEA83C /* DevCampFireBlack.png */,
+				BFD59B2C13D218FA00BEA83C /* DevCampFireBlue.png */,
+				BFD59B2D13D218FA00BEA83C /* DevCampFirePurple.png */,
+				BFD59B2E13D218FA00BEA83C /* DevCampFireRed.png */,
+				BFD59B3713D21A2200BEA83C /* DevCampFireGreen.png */,
+				BFD59B3813D21A2200BEA83C /* DevCampFireOrange.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,6 +499,12 @@
 			files = (
 				2EA510B613D1EBEF00CAA8E6 /* InfoPlist.strings in Resources */,
 				2EA510BF13D1EBEF00CAA8E6 /* MainWindow.xib in Resources */,
+				BFD59B2F13D218FA00BEA83C /* DevCampFireBlack.png in Resources */,
+				BFD59B3013D218FA00BEA83C /* DevCampFireBlue.png in Resources */,
+				BFD59B3113D218FA00BEA83C /* DevCampFirePurple.png in Resources */,
+				BFD59B3213D218FA00BEA83C /* DevCampFireRed.png in Resources */,
+				BFD59B3913D21A2200BEA83C /* DevCampFireGreen.png in Resources */,
+				BFD59B3A13D21A2200BEA83C /* DevCampFireOrange.png in Resources */,
 				3DE6692A13D215FE005B154F /* SignInViewController.xib in Resources */,
 				3DE6692F13D218C9005B154F /* RegisterViewController.xib in Resources */,
 			);
