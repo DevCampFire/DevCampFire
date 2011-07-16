@@ -40,6 +40,8 @@
 		BFD59B3013D218FA00BEA83C /* DevCampFireBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD59B2C13D218FA00BEA83C /* DevCampFireBlue.png */; };
 		BFD59B3113D218FA00BEA83C /* DevCampFirePurple.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD59B2D13D218FA00BEA83C /* DevCampFirePurple.png */; };
 		BFD59B3213D218FA00BEA83C /* DevCampFireRed.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD59B2E13D218FA00BEA83C /* DevCampFireRed.png */; };
+		BFD59B3913D21A2200BEA83C /* DevCampFireGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD59B3713D21A2200BEA83C /* DevCampFireGreen.png */; };
+		BFD59B3A13D21A2200BEA83C /* DevCampFireOrange.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD59B3813D21A2200BEA83C /* DevCampFireOrange.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +171,8 @@
 		BFD59B2C13D218FA00BEA83C /* DevCampFireBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevCampFireBlue.png; sourceTree = "<group>"; };
 		BFD59B2D13D218FA00BEA83C /* DevCampFirePurple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevCampFirePurple.png; sourceTree = "<group>"; };
 		BFD59B2E13D218FA00BEA83C /* DevCampFireRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevCampFireRed.png; sourceTree = "<group>"; };
+		BFD59B3713D21A2200BEA83C /* DevCampFireGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevCampFireGreen.png; sourceTree = "<group>"; };
+		BFD59B3813D21A2200BEA83C /* DevCampFireOrange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevCampFireOrange.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +328,8 @@
 				BFD59B2C13D218FA00BEA83C /* DevCampFireBlue.png */,
 				BFD59B2D13D218FA00BEA83C /* DevCampFirePurple.png */,
 				BFD59B2E13D218FA00BEA83C /* DevCampFireRed.png */,
+				BFD59B3713D21A2200BEA83C /* DevCampFireGreen.png */,
+				BFD59B3813D21A2200BEA83C /* DevCampFireOrange.png */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -481,6 +487,8 @@
 				BFD59B3013D218FA00BEA83C /* DevCampFireBlue.png in Resources */,
 				BFD59B3113D218FA00BEA83C /* DevCampFirePurple.png in Resources */,
 				BFD59B3213D218FA00BEA83C /* DevCampFireRed.png in Resources */,
+				BFD59B3913D21A2200BEA83C /* DevCampFireGreen.png in Resources */,
+				BFD59B3A13D21A2200BEA83C /* DevCampFireOrange.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
