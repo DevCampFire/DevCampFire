@@ -26,6 +26,7 @@
     RootViewController *rootViewController = [[RootViewController alloc] init];
 	//rootViewController.managedObjectContext = self.managedObjectContext;
 	UINavigationController* vC = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    vC.navigationBar.tintColor = [UIColor blackColor];
     
 	[self setViewController:vC];
 	[vC release];

@@ -7,7 +7,8 @@
 //
 
 #import "RootViewController.h"
-
+#import "MapAnnotation.h"
+#import "EventDetailViewController.h"
 
 @implementation RootViewController
 
@@ -29,11 +30,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-
-        
-        // Set the title of the TabBar Item + the image associated
-        UITabBarItem *theItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"StoreViewController", @"Title") image:nil tag:0];
-        self.tabBarItem = theItem;
+        self.title = @"iOS DevCamp Manager";
     }
     return self;
 }
@@ -71,6 +68,7 @@
     [toolbar sizeToFit];
     CGFloat toolbarHeight = [toolbar frame].size.height;
     toolbar.barStyle = UIBarStyleDefault;
+    toolbar.tintColor = [UIColor blackColor];
     //TODO: make size dynamic
     toolbar.frame = CGRectMake(0, mapView.bounds.size.height - toolbarHeight - 44, self.view.bounds.size.width, toolbarHeight);
     [self.view addSubview:toolbar];
@@ -101,6 +99,11 @@
         [self.mapView addAnnotation:mapAnnotation];
     }
     */
+    
+    // annotation for the City of San Francisco
+    MapAnnotation *mapAnnotation = [[MapAnnotation alloc] init];
+    [self.mapView addAnnotation:mapAnnotation];
+    [mapAnnotation release];
 }
 
 - (void) buttonsActions:(id)sender {
@@ -156,14 +159,15 @@
 
 #pragma mark -
 #pragma mark MKMapViewDelegate
-/*
+
 - (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
     // if it's the user location, just return nil.
     if ([annotation isKindOfClass:[MKUserLocation class]])
         return nil;
     
-    if ([annotation isKindOfClass:[NURMapAnnotation class]])
+    
+    if ([annotation isKindOfClass:[MapAnnotation class]])
     {
         static NSString* SFAnnotationIdentifier = @"AnnotationIdentifier";
         MKPinAnnotationView* pinView =
@@ -174,15 +178,15 @@
                                                                             reuseIdentifier:SFAnnotationIdentifier];
             annotationView.canShowCallout = YES;
             
-            UIImage *flagImage = [UIImage imageNamed:@"icon57.png"];
+            UIImage *flagImage = [UIImage imageNamed:@"Location.png"];
             
             CGRect resizeRect;
             
             resizeRect.size = flagImage.size;
             CGSize maxSize = CGRectInset(self.view.bounds,
-                                         [NURMapViewController annotationPadding],
-                                         [NURMapViewController annotationPadding]).size;
-            maxSize.height -= self.navigationController.navigationBar.frame.size.height + [NURMapViewController calloutHeight];
+                                         [RootViewController annotationPadding],
+                                         [RootViewController annotationPadding]).size;
+            maxSize.height -= self.navigationController.navigationBar.frame.size.height + [RootViewController calloutHeight];
             if (resizeRect.size.width > maxSize.width)
                 resizeRect.size = CGSizeMake(maxSize.width, resizeRect.size.height / resizeRect.size.width * maxSize.width);
             if (resizeRect.size.height > maxSize.height)
@@ -197,7 +201,7 @@
             annotationView.image = resizedImage;
             annotationView.opaque = NO;
             
-            UIImageView *sfIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon57.png"]];
+            UIImageView *sfIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Location.png"]];
             annotationView.leftCalloutAccessoryView = sfIconView;
             
             UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
@@ -213,14 +217,18 @@
             pinView.annotation = annotation;
         }
         return pinView;
+        
     }
-    
     return nil;
 }
-*/
+
 - (void)annotationAction:(id)sender
 {
     NSLog(@"sent action from disclosure button");
+    
+    EventDetailViewController *eventDetailViewController = [[EventDetailViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    [self.navigationController pushViewController:eventDetailViewController animated:YES];
+    [eventDetailViewController release];
 }
 
 
