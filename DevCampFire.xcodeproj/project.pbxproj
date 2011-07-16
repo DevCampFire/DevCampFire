@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2EA510AA13D1EBEF00CAA8E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA510A913D1EBEF00CAA8E6 /* UIKit.framework */; };
+		2EA510AC13D1EBEF00CAA8E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA510AB13D1EBEF00CAA8E6 /* Foundation.framework */; };
+		2EA510AE13D1EBEF00CAA8E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA510AD13D1EBEF00CAA8E6 /* CoreGraphics.framework */; };
+		2EA510B013D1EBEF00CAA8E6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA510AF13D1EBEF00CAA8E6 /* CoreData.framework */; };
+		2EA510B613D1EBEF00CAA8E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EA510B413D1EBEF00CAA8E6 /* InfoPlist.strings */; };
+		2EA510B913D1EBEF00CAA8E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA510B813D1EBEF00CAA8E6 /* main.m */; };
+		2EA510BC13D1EBEF00CAA8E6 /* DevCampFireAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA510BB13D1EBEF00CAA8E6 /* DevCampFireAppDelegate.m */; };
+		2EA510BF13D1EBEF00CAA8E6 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EA510BD13D1EBEF00CAA8E6 /* MainWindow.xib */; };
+		2EA510C213D1EBEF00CAA8E6 /* DevCampFire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EA510C013D1EBEF00CAA8E6 /* DevCampFire.xcdatamodeld */; };
+		2EA510C913D1EBEF00CAA8E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA510A913D1EBEF00CAA8E6 /* UIKit.framework */; };
+		2EA510CA13D1EBEF00CAA8E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA510AB13D1EBEF00CAA8E6 /* Foundation.framework */; };
+		2EA510CB13D1EBEF00CAA8E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA510AD13D1EBEF00CAA8E6 /* CoreGraphics.framework */; };
+		2EA510CC13D1EBEF00CAA8E6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA510AF13D1EBEF00CAA8E6 /* CoreData.framework */; };
+		2EA510D413D1EBEF00CAA8E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EA510D213D1EBEF00CAA8E6 /* InfoPlist.strings */; };
+		2EA510D713D1EBEF00CAA8E6 /* DevCampFireTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 2EA510D613D1EBEF00CAA8E6 /* DevCampFireTests.h */; };
+		2EA510D913D1EBEF00CAA8E6 /* DevCampFireTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA510D813D1EBEF00CAA8E6 /* DevCampFireTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2EA510CD13D1EBEF00CAA8E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2EA5109C13D1EBEE00CAA8E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2EA510A413D1EBEF00CAA8E6;
+			remoteInfo = DevCampFire;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2EA510A513D1EBEF00CAA8E6 /* DevCampFire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevCampFire.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EA510A913D1EBEF00CAA8E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2EA510AB13D1EBEF00CAA8E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2EA510AD13D1EBEF00CAA8E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2EA510AF13D1EBEF00CAA8E6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2EA510B313D1EBEF00CAA8E6 /* DevCampFire-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DevCampFire-Info.plist"; sourceTree = "<group>"; };
+		2EA510B513D1EBEF00CAA8E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2EA510B713D1EBEF00CAA8E6 /* DevCampFire-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DevCampFire-Prefix.pch"; sourceTree = "<group>"; };
+		2EA510B813D1EBEF00CAA8E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2EA510BA13D1EBEF00CAA8E6 /* DevCampFireAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DevCampFireAppDelegate.h; sourceTree = "<group>"; };
+		2EA510BB13D1EBEF00CAA8E6 /* DevCampFireAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DevCampFireAppDelegate.m; sourceTree = "<group>"; };
+		2EA510BE13D1EBEF00CAA8E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		2EA510C113D1EBEF00CAA8E6 /* DevCampFire.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DevCampFire.xcdatamodel; sourceTree = "<group>"; };
+		2EA510C813D1EBEF00CAA8E6 /* DevCampFireTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DevCampFireTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EA510D113D1EBEF00CAA8E6 /* DevCampFireTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DevCampFireTests-Info.plist"; sourceTree = "<group>"; };
+		2EA510D313D1EBEF00CAA8E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2EA510D513D1EBEF00CAA8E6 /* DevCampFireTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DevCampFireTests-Prefix.pch"; sourceTree = "<group>"; };
+		2EA510D613D1EBEF00CAA8E6 /* DevCampFireTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DevCampFireTests.h; sourceTree = "<group>"; };
+		2EA510D813D1EBEF00CAA8E6 /* DevCampFireTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DevCampFireTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2EA510A213D1EBEF00CAA8E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EA510AA13D1EBEF00CAA8E6 /* UIKit.framework in Frameworks */,
+				2EA510AC13D1EBEF00CAA8E6 /* Foundation.framework in Frameworks */,
+				2EA510AE13D1EBEF00CAA8E6 /* CoreGraphics.framework in Frameworks */,
+				2EA510B013D1EBEF00CAA8E6 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EA510C413D1EBEF00CAA8E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EA510C913D1EBEF00CAA8E6 /* UIKit.framework in Frameworks */,
+				2EA510CA13D1EBEF00CAA8E6 /* Foundation.framework in Frameworks */,
+				2EA510CB13D1EBEF00CAA8E6 /* CoreGraphics.framework in Frameworks */,
+				2EA510CC13D1EBEF00CAA8E6 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EA5109A13D1EBEE00CAA8E6 = {
+			isa = PBXGroup;
+			children = (
+				2EA510B113D1EBEF00CAA8E6 /* DevCampFire */,
+				2EA510CF13D1EBEF00CAA8E6 /* DevCampFireTests */,
+				2EA510A813D1EBEF00CAA8E6 /* Frameworks */,
+				2EA510A613D1EBEF00CAA8E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2EA510A613D1EBEF00CAA8E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2EA510A513D1EBEF00CAA8E6 /* DevCampFire.app */,
+				2EA510C813D1EBEF00CAA8E6 /* DevCampFireTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2EA510A813D1EBEF00CAA8E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EA510A913D1EBEF00CAA8E6 /* UIKit.framework */,
+				2EA510AB13D1EBEF00CAA8E6 /* Foundation.framework */,
+				2EA510AD13D1EBEF00CAA8E6 /* CoreGraphics.framework */,
+				2EA510AF13D1EBEF00CAA8E6 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2EA510B113D1EBEF00CAA8E6 /* DevCampFire */ = {
+			isa = PBXGroup;
+			children = (
+				2EA510BA13D1EBEF00CAA8E6 /* DevCampFireAppDelegate.h */,
+				2EA510BB13D1EBEF00CAA8E6 /* DevCampFireAppDelegate.m */,
+				2EA510BD13D1EBEF00CAA8E6 /* MainWindow.xib */,
+				2EA510C013D1EBEF00CAA8E6 /* DevCampFire.xcdatamodeld */,
+				2EA510B213D1EBEF00CAA8E6 /* Supporting Files */,
+			);
+			path = DevCampFire;
+			sourceTree = "<group>";
+		};
+		2EA510B213D1EBEF00CAA8E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2EA510B313D1EBEF00CAA8E6 /* DevCampFire-Info.plist */,
+				2EA510B413D1EBEF00CAA8E6 /* InfoPlist.strings */,
+				2EA510B713D1EBEF00CAA8E6 /* DevCampFire-Prefix.pch */,
+				2EA510B813D1EBEF00CAA8E6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2EA510CF13D1EBEF00CAA8E6 /* DevCampFireTests */ = {
+			isa = PBXGroup;
+			children = (
+				2EA510D613D1EBEF00CAA8E6 /* DevCampFireTests.h */,
+				2EA510D813D1EBEF00CAA8E6 /* DevCampFireTests.m */,
+				2EA510D013D1EBEF00CAA8E6 /* Supporting Files */,
+			);
+			path = DevCampFireTests;
+			sourceTree = "<group>";
+		};
+		2EA510D013D1EBEF00CAA8E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2EA510D113D1EBEF00CAA8E6 /* DevCampFireTests-Info.plist */,
+				2EA510D213D1EBEF00CAA8E6 /* InfoPlist.strings */,
+				2EA510D513D1EBEF00CAA8E6 /* DevCampFireTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2EA510A413D1EBEF00CAA8E6 /* DevCampFire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EA510DC13D1EBEF00CAA8E6 /* Build configuration list for PBXNativeTarget "DevCampFire" */;
+			buildPhases = (
+				2EA510A113D1EBEF00CAA8E6 /* Sources */,
+				2EA510A213D1EBEF00CAA8E6 /* Frameworks */,
+				2EA510A313D1EBEF00CAA8E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DevCampFire;
+			productName = DevCampFire;
+			productReference = 2EA510A513D1EBEF00CAA8E6 /* DevCampFire.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2EA510C713D1EBEF00CAA8E6 /* DevCampFireTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EA510DF13D1EBEF00CAA8E6 /* Build configuration list for PBXNativeTarget "DevCampFireTests" */;
+			buildPhases = (
+				2EA510C313D1EBEF00CAA8E6 /* Sources */,
+				2EA510C413D1EBEF00CAA8E6 /* Frameworks */,
+				2EA510C513D1EBEF00CAA8E6 /* Resources */,
+				2EA510C613D1EBEF00CAA8E6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2EA510CE13D1EBEF00CAA8E6 /* PBXTargetDependency */,
+			);
+			name = DevCampFireTests;
+			productName = DevCampFireTests;
+			productReference = 2EA510C813D1EBEF00CAA8E6 /* DevCampFireTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2EA5109C13D1EBEE00CAA8E6 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 2EA5109F13D1EBEE00CAA8E6 /* Build configuration list for PBXProject "DevCampFire" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2EA5109A13D1EBEE00CAA8E6;
+			productRefGroup = 2EA510A613D1EBEF00CAA8E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2EA510A413D1EBEF00CAA8E6 /* DevCampFire */,
+				2EA510C713D1EBEF00CAA8E6 /* DevCampFireTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2EA510A313D1EBEF00CAA8E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EA510B613D1EBEF00CAA8E6 /* InfoPlist.strings in Resources */,
+				2EA510BF13D1EBEF00CAA8E6 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EA510C513D1EBEF00CAA8E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EA510D413D1EBEF00CAA8E6 /* InfoPlist.strings in Resources */,
+				2EA510D713D1EBEF00CAA8E6 /* DevCampFireTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EA510C613D1EBEF00CAA8E6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2EA510A113D1EBEF00CAA8E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EA510B913D1EBEF00CAA8E6 /* main.m in Sources */,
+				2EA510BC13D1EBEF00CAA8E6 /* DevCampFireAppDelegate.m in Sources */,
+				2EA510C213D1EBEF00CAA8E6 /* DevCampFire.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EA510C313D1EBEF00CAA8E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EA510D913D1EBEF00CAA8E6 /* DevCampFireTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2EA510CE13D1EBEF00CAA8E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2EA510A413D1EBEF00CAA8E6 /* DevCampFire */;
+			targetProxy = 2EA510CD13D1EBEF00CAA8E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2EA510B413D1EBEF00CAA8E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EA510B513D1EBEF00CAA8E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2EA510BD13D1EBEF00CAA8E6 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EA510BE13D1EBEF00CAA8E6 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		2EA510D213D1EBEF00CAA8E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EA510D313D1EBEF00CAA8E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2EA510DA13D1EBEF00CAA8E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		2EA510DB13D1EBEF00CAA8E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		2EA510DD13D1EBEF00CAA8E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DevCampFire/DevCampFire-Prefix.pch";
+				INFOPLIST_FILE = "DevCampFire/DevCampFire-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2EA510DE13D1EBEF00CAA8E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DevCampFire/DevCampFire-Prefix.pch";
+				INFOPLIST_FILE = "DevCampFire/DevCampFire-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2EA510E013D1EBEF00CAA8E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DevCampFire.app/DevCampFire";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DevCampFireTests/DevCampFireTests-Prefix.pch";
+				INFOPLIST_FILE = "DevCampFireTests/DevCampFireTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		2EA510E113D1EBEF00CAA8E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DevCampFire.app/DevCampFire";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DevCampFireTests/DevCampFireTests-Prefix.pch";
+				INFOPLIST_FILE = "DevCampFireTests/DevCampFireTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2EA5109F13D1EBEE00CAA8E6 /* Build configuration list for PBXProject "DevCampFire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EA510DA13D1EBEF00CAA8E6 /* Debug */,
+				2EA510DB13D1EBEF00CAA8E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EA510DC13D1EBEF00CAA8E6 /* Build configuration list for PBXNativeTarget "DevCampFire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EA510DD13D1EBEF00CAA8E6 /* Debug */,
+				2EA510DE13D1EBEF00CAA8E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2EA510DF13D1EBEF00CAA8E6 /* Build configuration list for PBXNativeTarget "DevCampFireTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EA510E013D1EBEF00CAA8E6 /* Debug */,
+				2EA510E113D1EBEF00CAA8E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2EA510C013D1EBEF00CAA8E6 /* DevCampFire.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2EA510C113D1EBEF00CAA8E6 /* DevCampFire.xcdatamodel */,
+			);
+			currentVersion = 2EA510C113D1EBEF00CAA8E6 /* DevCampFire.xcdatamodel */;
+			path = DevCampFire.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2EA5109C13D1EBEE00CAA8E6 /* Project object */;
+}
