@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "SignInViewController.h"
 
-@interface RootViewController : UIViewController <MKMapViewDelegate> {
+@interface RootViewController : UIViewController <MKMapViewDelegate, SignInViewDelegate> {
     
     MKMapView *mapView;
     NSMutableArray *mapAnnotations;

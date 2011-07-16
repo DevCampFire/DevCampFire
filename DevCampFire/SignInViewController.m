@@ -7,9 +7,10 @@
 //
 
 #import "SignInViewController.h"
-
+#import "RegisterViewController.h"
 
 @implementation SignInViewController
+@synthesize delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -55,7 +56,26 @@
 }
 
 - (IBAction) doRegister:(id)sender {
+    //Register in navigation
+    registerView = [[RegisterViewController alloc] initWithNibName:@"RegisterViewController" bundle:nil];
+    registerView.delegate = delegate;
+    [registerView.view setFrame:self.view.bounds];
     
+    [UIView beginAnimations:nil context:nil];
+	[UIView setAnimationDuration:1.0];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight
+						   forView:[self view]
+							 cache:YES];
+	[[self view] addSubview:registerView.view];
+	[UIView commitAnimations];
+}
+
+- (IBAction) doSignIn:(id)sender {
+    [delegate didFinish:self];
+}
+
+- (IBAction) cancel:(id)sender {
+    [delegate didFinish:self];
 }
 
 @end

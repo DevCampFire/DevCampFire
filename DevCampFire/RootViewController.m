@@ -114,11 +114,34 @@
     
     switch (button.tag) {
         case 0:
-            
+        {
             //Sign in navigation
+            SignInViewController *signInView = [[SignInViewController alloc] initWithNibName:@"SignInViewController" bundle:nil];
+            signInView.delegate = self;
+            signInView.modalPresentationStyle = UIModalPresentationPageSheet;
+            
+            // show the navigation controller modally
+            [self presentModalViewController:signInView animated:YES];
+            
+            signInView.view.superview.backgroundColor = [UIColor colorWithRed:45.0/255.0 green:45.0/255.0 blue:45.0/255.0 alpha:1.0];
+            signInView.view.superview.autoresizingMask = 
+            UIViewAutoresizingFlexibleTopMargin | 
+            UIViewAutoresizingFlexibleBottomMargin;    
+            signInView.view.superview.frame = CGRectMake(
+                                                             signInView.view.superview.frame.origin.x,
+                                                             signInView.view.superview.frame.origin.y,
+                                                             540.0f,
+                                                             540.0f
+                                                             );
+            
+            CGPoint centerPoint = CGPointMake(self.view.bounds.size.width / 2, self.view.bounds.size.height / 2);
+            signInView.view.superview.center = centerPoint;
+            
+            // Clean up resources
+            [signInView release];
             
             break;
-            
+        }
             
         default:
             break;
@@ -243,6 +266,10 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)didFinish:(UIViewController *)view {
+    [self dismissModalViewControllerAnimated:true];
 }
 
 @end

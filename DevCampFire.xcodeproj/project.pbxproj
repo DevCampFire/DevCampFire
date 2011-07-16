@@ -39,6 +39,10 @@
 		3D2B075313D1F4BF00014D10 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B074F13D1F4BF00014D10 /* libxml2.dylib */; };
 		3D2B075413D1F4BF00014D10 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B075013D1F4BF00014D10 /* MobileCoreServices.framework */; };
 		3D2B075513D1F4BF00014D10 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B075113D1F4BF00014D10 /* SystemConfiguration.framework */; };
+		3D9DD9A713D24043009B0C55 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9DD9A613D24043009B0C55 /* CoreLocation.framework */; };
+		3D9DD9A913D240CD009B0C55 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9DD9A813D240CD009B0C55 /* AddressBook.framework */; };
+		3D9DD9AD13D24472009B0C55 /* ChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9DD9AB13D24472009B0C55 /* ChoiceViewController.m */; };
+		3D9DD9AE13D24472009B0C55 /* ChoiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D9DD9AC13D24472009B0C55 /* ChoiceViewController.xib */; };
 		3DE6692913D215FE005B154F /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6692713D215FE005B154F /* SignInViewController.m */; };
 		3DE6692A13D215FE005B154F /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE6692813D215FE005B154F /* SignInViewController.xib */; };
 		3DE6692E13D218C9005B154F /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6692C13D218C9005B154F /* RegisterViewController.m */; };
@@ -179,6 +183,11 @@
 		3D2B074F13D1F4BF00014D10 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		3D2B075013D1F4BF00014D10 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3D2B075113D1F4BF00014D10 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3D9DD9A613D24043009B0C55 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3D9DD9A813D240CD009B0C55 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		3D9DD9AA13D24471009B0C55 /* ChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceViewController.h; sourceTree = "<group>"; };
+		3D9DD9AB13D24472009B0C55 /* ChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceViewController.m; sourceTree = "<group>"; };
+		3D9DD9AC13D24472009B0C55 /* ChoiceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoiceViewController.xib; sourceTree = "<group>"; };
 		3DE6692613D215FE005B154F /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		3DE6692713D215FE005B154F /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		3DE6692813D215FE005B154F /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
@@ -198,6 +207,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D9DD9A913D240CD009B0C55 /* AddressBook.framework in Frameworks */,
+				3D9DD9A713D24043009B0C55 /* CoreLocation.framework in Frameworks */,
 				2ECB467013D2110800D5B13E /* MapKit.framework in Frameworks */,
 				3D2B075213D1F4BF00014D10 /* CFNetwork.framework in Frameworks */,
 				2EA510B013D1EBEF00CAA8E6 /* CoreData.framework in Frameworks */,
@@ -235,6 +246,7 @@
 		2EA5109A13D1EBEE00CAA8E6 = {
 			isa = PBXGroup;
 			children = (
+				3D9DD9A813D240CD009B0C55 /* AddressBook.framework */,
 				2EA510B113D1EBEF00CAA8E6 /* DevCampFire */,
 				2EA510CF13D1EBEF00CAA8E6 /* DevCampFireTests */,
 				2EA510A813D1EBEF00CAA8E6 /* Frameworks */,
@@ -255,6 +267,7 @@
 		2EA510A813D1EBEF00CAA8E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D9DD9A613D24043009B0C55 /* CoreLocation.framework */,
 				3D2B074D13D1F4BF00014D10 /* CFNetwork.framework */,
 				3D2B074E13D1F4BF00014D10 /* CoreData.framework */,
 				3D2B074F13D1F4BF00014D10 /* libxml2.dylib */,
@@ -279,6 +292,9 @@
 		2EA510B113D1EBEF00CAA8E6 /* DevCampFire */ = {
 			isa = PBXGroup;
 			children = (
+				3D9DD9AA13D24471009B0C55 /* ChoiceViewController.h */,
+				3D9DD9AB13D24472009B0C55 /* ChoiceViewController.m */,
+				3D9DD9AC13D24472009B0C55 /* ChoiceViewController.xib */,
 				2E7AE1C913D21C2B00A9049D /* EventDetailViewController.h */,
 				2E7AE1CA13D21C2B00A9049D /* EventDetailViewController.m */,
 				2ECB468813D2153000D5B13E /* MapAnnotation.h */,
@@ -521,6 +537,7 @@
 				3DE6692A13D215FE005B154F /* SignInViewController.xib in Resources */,
 				3DE6692F13D218C9005B154F /* RegisterViewController.xib in Resources */,
 				2E7AE1C513D218E500A9049D /* Location.png in Resources */,
+				3D9DD9AE13D24472009B0C55 /* ChoiceViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +581,7 @@
 				3DE6692E13D218C9005B154F /* RegisterViewController.m in Sources */,
 				2ECB468A13D2153000D5B13E /* MapAnnotation.m in Sources */,
 				2E7AE1CB13D21C2B00A9049D /* EventDetailViewController.m in Sources */,
+				3D9DD9AD13D24472009B0C55 /* ChoiceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
