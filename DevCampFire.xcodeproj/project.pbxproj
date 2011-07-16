@@ -439,6 +439,7 @@
 				2EA510DE13D1EBEF00CAA8E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EA510DF13D1EBEF00CAA8E6 /* Build configuration list for PBXNativeTarget "DevCampFireTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +448,7 @@
 				2EA510E113D1EBEF00CAA8E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
