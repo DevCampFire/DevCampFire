@@ -7,6 +7,8 @@
 //
 
 #import "DevCampFireAppDelegate.h"
+#import <RestKit/RestKit.h>
+#import <RestKit/CoreData/CoreData.h>
 
 @implementation DevCampFireAppDelegate
 
