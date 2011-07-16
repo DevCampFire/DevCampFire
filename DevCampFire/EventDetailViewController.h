@@ -9,8 +9,14 @@
 #import <UIKit/UIKit.h>
 
 
-@interface EventDetailViewController : UITableViewController {
+@interface EventDetailViewController : UITableViewController <NSFetchedResultsControllerDelegate> {
     
+    NSFetchedResultsController *fetchedResultsController;
 }
+
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+
+- (void) addHeaderAndFooter;
 
 @end

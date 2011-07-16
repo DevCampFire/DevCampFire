@@ -11,11 +11,15 @@
 
 @implementation EventDetailViewController
 
+@synthesize fetchedResultsController, managedObjectContext;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        
+        
     }
     return self;
 }
@@ -39,12 +43,45 @@
 {
     [super viewDidLoad];
 
+    [self addHeaderAndFooter];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+- (NSFetchedResultsController *)fetchedResultsController {
+    
+    if (fetchedResultsController != nil) {
+        return fetchedResultsController;
+    }
+    
+    if(self.managedObjectContext != nil){
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"DCEvent" inManagedObjectContext:self.managedObjectContext];
+        
+        // Setup the fetch request
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+        [fetchRequest setEntity:entity];
+        
+        // Define how we will sort the records
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+        NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+        
+        [fetchRequest setSortDescriptors:sortDescriptors];
+        
+        NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+        
+        aFetchedResultsController.delegate = self;
+        self.fetchedResultsController = aFetchedResultsController;
+        
+        
+        [fetchedResultsController performFetch:nil];
+    }
+    return fetchedResultsController;
+}
+
 
 - (void)viewDidUnload
 {
@@ -81,6 +118,7 @@
 
 #pragma mark - Table view data source
 
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
@@ -90,12 +128,51 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (section == 0) {
-        return 1;
+        return 2;
     }
     else {
-        return 1; //TODO: make this dynamic fetching project entities
+        return [[[self.fetchedResultsController fetchedObjects] mutableCopy] count]; //TODO: make this dynamic fetching project entities
     }
     // Return the number of rows in the section.
+}
+-(CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section
+{
+        return 27;
+}
+
+
+-(CGFloat)tableView:(UITableView*)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 0.0;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 27)];
+    headerView.backgroundColor = [UIColor blackColor];
+    
+    UIImageView *backgroundImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, -1, self.view.bounds.size.width, 27)];
+    backgroundImage.image = [UIImage imageNamed:@"bande_separator.png"];
+    
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 2, 320, 20)];
+    title.font = [UIFont boldSystemFontOfSize:12];
+    title.textAlignment = UITextAlignmentCenter;
+    title.textColor = [UIColor whiteColor];
+    title.backgroundColor = [UIColor clearColor];
+    
+    if (section == 0) {
+        title.text = @"Event Details";
+    }
+    if (section == 1) {
+        title.text = @"Projects";
+    }
+    
+    [headerView addSubview:backgroundImage];
+    [headerView addSubview:title];
+    [title release];
+    [backgroundImage release];
+    
+    return headerView;
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -117,14 +194,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void) addHeaderAndFooter
+{
+    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 0)];
+    header.backgroundColor = [UIColor clearColor];
+    
+    UIView *footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 0)];
+    footer.backgroundColor = [UIColor clearColor];
+    
+    
+    [self.tableView setTableHeaderView:header];
+    [self.tableView setTableFooterView:footer];
+    [header release];
+    [footer release];
 }
 
 @end

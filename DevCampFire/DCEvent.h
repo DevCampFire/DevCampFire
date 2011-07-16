@@ -22,4 +22,9 @@
 @property (nonatomic, retain) NSManagedObject * organizer;
 @property (nonatomic, retain) NSSet* projects;
 
+- (void)addProjectsObject:(NSManagedObject *)value;
+- (void)removeProjectsObject:(NSManagedObject *)value;
+- (void)addProjects:(NSSet *)value;
+- (void)removeProjects:(NSSet *)value;
+
 @end

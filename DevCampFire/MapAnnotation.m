@@ -14,41 +14,40 @@
 @synthesize image;
 @synthesize latitude;
 @synthesize longitude;
-//@synthesize store;
+@synthesize event;
+@synthesize tag;
 
 - (CLLocationCoordinate2D)coordinate;
 {
 
     CLLocationCoordinate2D theCoordinate;
-    //theCoordinate.latitude = [store.latitude doubleValue];
-    //theCoordinate.longitude = [store.longitude doubleValue];
-    
-    theCoordinate.latitude = 46.79123;
-    theCoordinate.longitude = -71.28788;
+    theCoordinate.latitude = [latitude doubleValue];
+    theCoordinate.longitude = [longitude doubleValue];
     
     return theCoordinate; 
 }
 
 - (NSString *)title
 {
-    //return store.localizedName;
-    return @"Mirego";
+    return event.name;
 }
 
 // optional
 - (NSString *)subtitle
 {
-    //return store.address;
-    return @"test";
+    return nil;
 }
 
-/*
--(void)setStore:(Store *)_store{
+
+-(void)setEvent:(DCEvent *)_event {
     
-    if(_store){
+    if(_event){
         
-        store = _store;
+        event = _event;
+        latitude = event.latitude;
+        longitude = event.longitude;
+
     }
 }
-*/
+
 @end

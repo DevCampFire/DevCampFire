@@ -9,10 +9,11 @@
 #import "RootViewController.h"
 #import "MapAnnotation.h"
 #import "EventDetailViewController.h"
+#import "DCEvent.h"
 
 @implementation RootViewController
 
-@synthesize mapView, mapAnnotations, managedObjectContext;
+@synthesize mapView, mapAnnotations, managedObjectContext, fetchedResultsController;
 
 #pragma mark -
 
@@ -86,19 +87,23 @@
     [toolbar setItems:items animated:NO];
     [self.view addSubview:toolbar];
     
-    /*
-    NSMutableArray *allStores = [[self.fetchedResultsController fetchedObjects] mutableCopy];
     
-    for (int i = 0; i < [allStores count]; i++) {
+    NSMutableArray *allEvents = [[self.fetchedResultsController fetchedObjects] mutableCopy];
+    
+    //NSLog(@"%d", [allEvents count]);
+
+    for (int i = 0; i < [allEvents count]; i++) {
         
-        Store *store = [[self.fetchedResultsController fetchedObjects] objectAtIndex:i];
+        DCEvent *event = [[self.fetchedResultsController fetchedObjects] objectAtIndex:i];
         
-        NURMapAnnotation *mapAnnotation = [[NURMapAnnotation alloc] init];
-        mapAnnotation.store = store;
+        MapAnnotation *mapAnnotation = [[MapAnnotation alloc] init];
+        mapAnnotation.event = event;
+        
+        NSLog(@"%d", [[event.projects allObjects] count]);
         
         [self.mapView addAnnotation:mapAnnotation];
     }
-    */
+    
     
     // annotation for the City of San Francisco
     MapAnnotation *mapAnnotation = [[MapAnnotation alloc] init];
@@ -125,7 +130,7 @@
     }
 }
 
-/*
+
 - (NSFetchedResultsController *)fetchedResultsController {
     
     if (fetchedResultsController != nil) {
@@ -133,14 +138,14 @@
     }
     
     if(self.managedObjectContext != nil){
-        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Store" inManagedObjectContext:self.managedObjectContext];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"DCEvent" inManagedObjectContext:self.managedObjectContext];
         
         // Setup the fetch request
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
         [fetchRequest setEntity:entity];
         
         // Define how we will sort the records
-        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"localizedName" ascending:YES];
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
         NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
         
         [fetchRequest setSortDescriptors:sortDescriptors];
@@ -155,7 +160,7 @@
     }
     return fetchedResultsController;
 }
-*/
+
 
 #pragma mark -
 #pragma mark MKMapViewDelegate
@@ -178,7 +183,7 @@
                                                                             reuseIdentifier:SFAnnotationIdentifier];
             annotationView.canShowCallout = YES;
             
-            UIImage *flagImage = [UIImage imageNamed:@"Location.png"];
+            UIImage *flagImage = [UIImage imageNamed:@"mapIcon.png"];
             
             CGRect resizeRect;
             
@@ -201,13 +206,11 @@
             annotationView.image = resizedImage;
             annotationView.opaque = NO;
             
-            UIImageView *sfIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Location.png"]];
+            UIImageView *sfIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@""]];
             annotationView.leftCalloutAccessoryView = sfIconView;
             
             UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-            [rightButton addTarget:self
-                            action:@selector(annotationAction:)
-                  forControlEvents:UIControlEventTouchUpInside];
+            //[rightButton addTarget:self action:@selector(annotationAction:) forControlEvents:UIControlEventTouchUpInside];
             annotationView.rightCalloutAccessoryView = rightButton;
             
             return annotationView;
@@ -222,9 +225,14 @@
     return nil;
 }
 
-- (void)annotationAction:(id)sender
-{
-    NSLog(@"sent action from disclosure button");
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+    
+    
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    
+    //MapAnnotation *mapAnnotation = view.annotation;
     
     EventDetailViewController *eventDetailViewController = [[EventDetailViewController alloc] initWithStyle:UITableViewStyleGrouped];
     [self.navigationController pushViewController:eventDetailViewController animated:YES];

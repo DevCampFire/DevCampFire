@@ -10,6 +10,8 @@
 #import "RootViewController.h"
 #import <RestKit/RestKit.h>
 #import <RestKit/CoreData/CoreData.h>
+#import "DCEvent.h"
+#import "DCProject.h"
 
 @implementation DevCampFireAppDelegate
 
@@ -24,13 +26,31 @@
 {
     
     RootViewController *rootViewController = [[RootViewController alloc] init];
-	//rootViewController.managedObjectContext = self.managedObjectContext;
+	rootViewController.managedObjectContext = self.managedObjectContext;
 	UINavigationController* vC = [[UINavigationController alloc] initWithRootViewController:rootViewController];
     vC.navigationBar.tintColor = [UIColor blackColor];
     
-	[self setViewController:vC];
+	[self setViewController:vC]; 
 	[vC release];
 	vC = nil;
+    
+    DCEvent *event = [NSEntityDescription insertNewObjectForEntityForName:@"DCEvent" inManagedObjectContext:self.managedObjectContext];
+    event.name = @"Mirego";
+    event.latitude = [NSNumber numberWithDouble:46.79123];
+    event.longitude = [NSNumber numberWithDouble:-71.28788];
+    
+    DCProject *project = [NSEntityDescription insertNewObjectForEntityForName:@"DCProject" inManagedObjectContext:self.managedObjectContext];
+    project.name = @"iOS DevCamp Manager";
+    
+    [event addProjectsObject:project];
+    
+    DCProject *project2 = [NSEntityDescription insertNewObjectForEntityForName:@"DCProject" inManagedObjectContext:self.managedObjectContext];
+    project2.name = @"Jaw Breaker";
+    
+    [event addProjectsObject:project2];
+    
+    
+    [self.managedObjectContext save:nil];
     
     // Override point for customization after application launch.
     [self.window addSubview: [[self viewController] view]];

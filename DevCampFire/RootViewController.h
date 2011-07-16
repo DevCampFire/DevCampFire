@@ -9,15 +9,18 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface RootViewController : UIViewController <MKMapViewDelegate> {
+@interface RootViewController : UIViewController <MKMapViewDelegate, NSFetchedResultsControllerDelegate> {
     
     MKMapView *mapView;
     NSMutableArray *mapAnnotations;
     UIBarButtonItem *btnUser;
+    NSFetchedResultsController *fetchedResultsController;
+    
 }
 
 @property (nonatomic, retain) MKMapView *mapView;
 @property (nonatomic, retain) NSMutableArray *mapAnnotations;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
 @end

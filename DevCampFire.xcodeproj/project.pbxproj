@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2E3238D013D210A00023D633 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3238CF13D210A00023D633 /* RootViewController.m */; };
-		2E7AE1C513D218E500A9049D /* Location.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E7AE1C413D218E500A9049D /* Location.png */; };
 		2E7AE1CB13D21C2B00A9049D /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7AE1CA13D21C2B00A9049D /* EventDetailViewController.m */; };
+		2E7AE20113D2226400A9049D /* mapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E7AE20013D2226400A9049D /* mapIcon.png */; };
+		2E7AE21B13D22BA400A9049D /* DCEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7AE21A13D22BA400A9049D /* DCEvent.m */; };
+		2E7AE21E13D22BA400A9049D /* DCProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7AE21D13D22BA400A9049D /* DCProject.m */; };
+		2E7AE22113D22BA400A9049D /* DCParticipant.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7AE22013D22BA400A9049D /* DCParticipant.m */; };
 		2EA510AA13D1EBEF00CAA8E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA510A913D1EBEF00CAA8E6 /* UIKit.framework */; };
 		2EA510AC13D1EBEF00CAA8E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA510AB13D1EBEF00CAA8E6 /* Foundation.framework */; };
 		2EA510AE13D1EBEF00CAA8E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA510AD13D1EBEF00CAA8E6 /* CoreGraphics.framework */; };
@@ -141,9 +144,15 @@
 /* Begin PBXFileReference section */
 		2E3238CE13D210A00023D633 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		2E3238CF13D210A00023D633 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		2E7AE1C413D218E500A9049D /* Location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Location.png; sourceTree = "<group>"; };
 		2E7AE1C913D21C2B00A9049D /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
 		2E7AE1CA13D21C2B00A9049D /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
+		2E7AE20013D2226400A9049D /* mapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapIcon.png; sourceTree = "<group>"; };
+		2E7AE21913D22BA400A9049D /* DCEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCEvent.h; sourceTree = "<group>"; };
+		2E7AE21A13D22BA400A9049D /* DCEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCEvent.m; sourceTree = "<group>"; };
+		2E7AE21C13D22BA400A9049D /* DCProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCProject.h; sourceTree = "<group>"; };
+		2E7AE21D13D22BA400A9049D /* DCProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCProject.m; sourceTree = "<group>"; };
+		2E7AE21F13D22BA400A9049D /* DCParticipant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCParticipant.h; sourceTree = "<group>"; };
+		2E7AE22013D22BA400A9049D /* DCParticipant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCParticipant.m; sourceTree = "<group>"; };
 		2EA510A513D1EBEF00CAA8E6 /* DevCampFire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevCampFire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EA510A913D1EBEF00CAA8E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2EA510AB13D1EBEF00CAA8E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -232,6 +241,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E7AE21213D22AC900A9049D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2E7AE21F13D22BA400A9049D /* DCParticipant.h */,
+				2E7AE22013D22BA400A9049D /* DCParticipant.m */,
+				2E7AE21C13D22BA400A9049D /* DCProject.h */,
+				2E7AE21D13D22BA400A9049D /* DCProject.m */,
+				2E7AE21913D22BA400A9049D /* DCEvent.h */,
+				2E7AE21A13D22BA400A9049D /* DCEvent.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
 		2EA5109A13D1EBEE00CAA8E6 = {
 			isa = PBXGroup;
 			children = (
@@ -279,17 +301,17 @@
 		2EA510B113D1EBEF00CAA8E6 /* DevCampFire */ = {
 			isa = PBXGroup;
 			children = (
-				2E7AE1C913D21C2B00A9049D /* EventDetailViewController.h */,
-				2E7AE1CA13D21C2B00A9049D /* EventDetailViewController.m */,
 				2ECB468813D2153000D5B13E /* MapAnnotation.h */,
 				2ECB468913D2153000D5B13E /* MapAnnotation.m */,
+				2E7AE21213D22AC900A9049D /* Entities */,
+				2E7AE1C913D21C2B00A9049D /* EventDetailViewController.h */,
+				2E7AE1CA13D21C2B00A9049D /* EventDetailViewController.m */,
 				2E3238CE13D210A00023D633 /* RootViewController.h */,
 				2E3238CF13D210A00023D633 /* RootViewController.m */,
 				2EA510BA13D1EBEF00CAA8E6 /* DevCampFireAppDelegate.h */,
 				2EA510BB13D1EBEF00CAA8E6 /* DevCampFireAppDelegate.m */,
 				2EA510BD13D1EBEF00CAA8E6 /* MainWindow.xib */,
 				2EA510C013D1EBEF00CAA8E6 /* DevCampFire.xcdatamodeld */,
-				2E7AE1C413D218E500A9049D /* Location.png */,
 				2EA510B213D1EBEF00CAA8E6 /* Supporting Files */,
 				BFD59B2A13D218FA00BEA83C /* Assets */,
 				3DE6692613D215FE005B154F /* SignInViewController.h */,
@@ -353,6 +375,7 @@
 		BFD59B2A13D218FA00BEA83C /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				2E7AE20013D2226400A9049D /* mapIcon.png */,
 				BFD59B2B13D218FA00BEA83C /* DevCampFireBlack.png */,
 				BFD59B2C13D218FA00BEA83C /* DevCampFireBlue.png */,
 				BFD59B2D13D218FA00BEA83C /* DevCampFirePurple.png */,
@@ -520,7 +543,7 @@
 				BFD59B3A13D21A2200BEA83C /* DevCampFireOrange.png in Resources */,
 				3DE6692A13D215FE005B154F /* SignInViewController.xib in Resources */,
 				3DE6692F13D218C9005B154F /* RegisterViewController.xib in Resources */,
-				2E7AE1C513D218E500A9049D /* Location.png in Resources */,
+				2E7AE20113D2226400A9049D /* mapIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +587,9 @@
 				3DE6692E13D218C9005B154F /* RegisterViewController.m in Sources */,
 				2ECB468A13D2153000D5B13E /* MapAnnotation.m in Sources */,
 				2E7AE1CB13D21C2B00A9049D /* EventDetailViewController.m in Sources */,
+				2E7AE21B13D22BA400A9049D /* DCEvent.m in Sources */,
+				2E7AE21E13D22BA400A9049D /* DCProject.m in Sources */,
+				2E7AE22113D22BA400A9049D /* DCParticipant.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
