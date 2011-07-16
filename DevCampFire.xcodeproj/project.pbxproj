@@ -23,6 +23,8 @@
 		2EA510D413D1EBEF00CAA8E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EA510D213D1EBEF00CAA8E6 /* InfoPlist.strings */; };
 		2EA510D713D1EBEF00CAA8E6 /* DevCampFireTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 2EA510D613D1EBEF00CAA8E6 /* DevCampFireTests.h */; };
 		2EA510D913D1EBEF00CAA8E6 /* DevCampFireTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA510D813D1EBEF00CAA8E6 /* DevCampFireTests.m */; };
+		2EB9614013D1F1A70036FA47 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9613F13D1F1A70036FA47 /* RootViewController.m */; };
+		2EB9616413D204AB0036FA47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB9616313D204AB0036FA47 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,9 @@
 		2EA510D513D1EBEF00CAA8E6 /* DevCampFireTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DevCampFireTests-Prefix.pch"; sourceTree = "<group>"; };
 		2EA510D613D1EBEF00CAA8E6 /* DevCampFireTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DevCampFireTests.h; sourceTree = "<group>"; };
 		2EA510D813D1EBEF00CAA8E6 /* DevCampFireTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DevCampFireTests.m; sourceTree = "<group>"; };
+		2EB9613E13D1F1A70036FA47 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		2EB9613F13D1F1A70036FA47 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		2EB9616313D204AB0036FA47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EB9616413D204AB0036FA47 /* MapKit.framework in Frameworks */,
 				2EA510AA13D1EBEF00CAA8E6 /* UIKit.framework in Frameworks */,
 				2EA510AC13D1EBEF00CAA8E6 /* Foundation.framework in Frameworks */,
 				2EA510AE13D1EBEF00CAA8E6 /* CoreGraphics.framework in Frameworks */,
@@ -105,6 +111,7 @@
 		2EA510A813D1EBEF00CAA8E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2EB9616313D204AB0036FA47 /* MapKit.framework */,
 				2EA510A913D1EBEF00CAA8E6 /* UIKit.framework */,
 				2EA510AB13D1EBEF00CAA8E6 /* Foundation.framework */,
 				2EA510AD13D1EBEF00CAA8E6 /* CoreGraphics.framework */,
@@ -116,6 +123,8 @@
 		2EA510B113D1EBEF00CAA8E6 /* DevCampFire */ = {
 			isa = PBXGroup;
 			children = (
+				2EB9613E13D1F1A70036FA47 /* RootViewController.h */,
+				2EB9613F13D1F1A70036FA47 /* RootViewController.m */,
 				2EA510BA13D1EBEF00CAA8E6 /* DevCampFireAppDelegate.h */,
 				2EA510BB13D1EBEF00CAA8E6 /* DevCampFireAppDelegate.m */,
 				2EA510BD13D1EBEF00CAA8E6 /* MainWindow.xib */,
@@ -263,6 +272,7 @@
 				2EA510B913D1EBEF00CAA8E6 /* main.m in Sources */,
 				2EA510BC13D1EBEF00CAA8E6 /* DevCampFireAppDelegate.m in Sources */,
 				2EA510C213D1EBEF00CAA8E6 /* DevCampFire.xcdatamodeld in Sources */,
+				2EB9614013D1F1A70036FA47 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +449,7 @@
 				2EA510DE13D1EBEF00CAA8E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EA510DF13D1EBEF00CAA8E6 /* Build configuration list for PBXNativeTarget "DevCampFireTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +458,7 @@
 				2EA510E113D1EBEF00CAA8E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
