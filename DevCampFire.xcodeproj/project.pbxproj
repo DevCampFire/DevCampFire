@@ -36,6 +36,10 @@
 		3D2B075313D1F4BF00014D10 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B074F13D1F4BF00014D10 /* libxml2.dylib */; };
 		3D2B075413D1F4BF00014D10 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B075013D1F4BF00014D10 /* MobileCoreServices.framework */; };
 		3D2B075513D1F4BF00014D10 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B075113D1F4BF00014D10 /* SystemConfiguration.framework */; };
+		3DE6692913D215FE005B154F /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6692713D215FE005B154F /* SignInViewController.m */; };
+		3DE6692A13D215FE005B154F /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE6692813D215FE005B154F /* SignInViewController.xib */; };
+		3DE6692E13D218C9005B154F /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6692C13D218C9005B154F /* RegisterViewController.m */; };
+		3DE6692F13D218C9005B154F /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE6692D13D218C9005B154F /* RegisterViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +165,12 @@
 		3D2B074F13D1F4BF00014D10 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		3D2B075013D1F4BF00014D10 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3D2B075113D1F4BF00014D10 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3DE6692613D215FE005B154F /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		3DE6692713D215FE005B154F /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		3DE6692813D215FE005B154F /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		3DE6692B13D218C9005B154F /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		3DE6692C13D218C9005B154F /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		3DE6692D13D218C9005B154F /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +266,12 @@
 				2EA510BD13D1EBEF00CAA8E6 /* MainWindow.xib */,
 				2EA510C013D1EBEF00CAA8E6 /* DevCampFire.xcdatamodeld */,
 				2EA510B213D1EBEF00CAA8E6 /* Supporting Files */,
+				3DE6692613D215FE005B154F /* SignInViewController.h */,
+				3DE6692713D215FE005B154F /* SignInViewController.m */,
+				3DE6692813D215FE005B154F /* SignInViewController.xib */,
+				3DE6692B13D218C9005B154F /* RegisterViewController.h */,
+				3DE6692C13D218C9005B154F /* RegisterViewController.m */,
+				3DE6692D13D218C9005B154F /* RegisterViewController.xib */,
 			);
 			path = DevCampFire;
 			sourceTree = "<group>";
@@ -457,6 +473,8 @@
 			files = (
 				2EA510B613D1EBEF00CAA8E6 /* InfoPlist.strings in Resources */,
 				2EA510BF13D1EBEF00CAA8E6 /* MainWindow.xib in Resources */,
+				3DE6692A13D215FE005B154F /* SignInViewController.xib in Resources */,
+				3DE6692F13D218C9005B154F /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +514,8 @@
 				2EA510BC13D1EBEF00CAA8E6 /* DevCampFireAppDelegate.m in Sources */,
 				2EA510C213D1EBEF00CAA8E6 /* DevCampFire.xcdatamodeld in Sources */,
 				2E3238D013D210A00023D633 /* RootViewController.m in Sources */,
+				3DE6692913D215FE005B154F /* SignInViewController.m in Sources */,
+				3DE6692E13D218C9005B154F /* RegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
