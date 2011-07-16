@@ -36,6 +36,10 @@
 		3D2B075313D1F4BF00014D10 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B074F13D1F4BF00014D10 /* libxml2.dylib */; };
 		3D2B075413D1F4BF00014D10 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B075013D1F4BF00014D10 /* MobileCoreServices.framework */; };
 		3D2B075513D1F4BF00014D10 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B075113D1F4BF00014D10 /* SystemConfiguration.framework */; };
+		BFD59B2F13D218FA00BEA83C /* DevCampFireBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD59B2B13D218FA00BEA83C /* DevCampFireBlack.png */; };
+		BFD59B3013D218FA00BEA83C /* DevCampFireBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD59B2C13D218FA00BEA83C /* DevCampFireBlue.png */; };
+		BFD59B3113D218FA00BEA83C /* DevCampFirePurple.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD59B2D13D218FA00BEA83C /* DevCampFirePurple.png */; };
+		BFD59B3213D218FA00BEA83C /* DevCampFireRed.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD59B2E13D218FA00BEA83C /* DevCampFireRed.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +165,10 @@
 		3D2B074F13D1F4BF00014D10 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		3D2B075013D1F4BF00014D10 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3D2B075113D1F4BF00014D10 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BFD59B2B13D218FA00BEA83C /* DevCampFireBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevCampFireBlack.png; sourceTree = "<group>"; };
+		BFD59B2C13D218FA00BEA83C /* DevCampFireBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevCampFireBlue.png; sourceTree = "<group>"; };
+		BFD59B2D13D218FA00BEA83C /* DevCampFirePurple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevCampFirePurple.png; sourceTree = "<group>"; };
+		BFD59B2E13D218FA00BEA83C /* DevCampFireRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevCampFireRed.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +264,7 @@
 				2EA510BD13D1EBEF00CAA8E6 /* MainWindow.xib */,
 				2EA510C013D1EBEF00CAA8E6 /* DevCampFire.xcdatamodeld */,
 				2EA510B213D1EBEF00CAA8E6 /* Supporting Files */,
+				BFD59B2A13D218FA00BEA83C /* Assets */,
 			);
 			path = DevCampFire;
 			sourceTree = "<group>";
@@ -306,6 +315,17 @@
 				3D2B073C13D1F3CA00014D10 /* UISpec.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BFD59B2A13D218FA00BEA83C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BFD59B2B13D218FA00BEA83C /* DevCampFireBlack.png */,
+				BFD59B2C13D218FA00BEA83C /* DevCampFireBlue.png */,
+				BFD59B2D13D218FA00BEA83C /* DevCampFirePurple.png */,
+				BFD59B2E13D218FA00BEA83C /* DevCampFireRed.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,6 +477,10 @@
 			files = (
 				2EA510B613D1EBEF00CAA8E6 /* InfoPlist.strings in Resources */,
 				2EA510BF13D1EBEF00CAA8E6 /* MainWindow.xib in Resources */,
+				BFD59B2F13D218FA00BEA83C /* DevCampFireBlack.png in Resources */,
+				BFD59B3013D218FA00BEA83C /* DevCampFireBlue.png in Resources */,
+				BFD59B3113D218FA00BEA83C /* DevCampFirePurple.png in Resources */,
+				BFD59B3213D218FA00BEA83C /* DevCampFireRed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
