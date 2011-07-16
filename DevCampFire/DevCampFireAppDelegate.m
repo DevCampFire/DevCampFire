@@ -8,6 +8,8 @@
 
 #import "DevCampFireAppDelegate.h"
 #import "RootViewController.h"
+#import <RestKit/RestKit.h>
+#import <RestKit/CoreData/CoreData.h>
 
 @implementation DevCampFireAppDelegate
 
