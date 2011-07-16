@@ -7,18 +7,21 @@
 //
 
 #import <MapKit/MapKit.h>
+#import "DCEvent.h"
 
 @interface MapAnnotation : NSObject <MKAnnotation> {
     
     UIImage *image;
     NSNumber *latitude;
     NSNumber *longitude;
-    //Store *store;
+    NSNumber *tag;
+    DCEvent *event;
 }
 
 @property (nonatomic, retain) UIImage *image;
 @property (nonatomic, retain) NSNumber *latitude;
 @property (nonatomic, retain) NSNumber *longitude;
-//@property (nonatomic, strong) Store *store;
+@property (nonatomic, retain) NSNumber *tag;
+@property (nonatomic, retain) DCEvent *event;
 
 @end

@@ -10,15 +10,18 @@
 #import <MapKit/MapKit.h>
 #import "SignInViewController.h"
 
-@interface RootViewController : UIViewController <MKMapViewDelegate, SignInViewDelegate> {
+@interface RootViewController : UIViewController <MKMapViewDelegate, SignInViewDelegate, NSFetchedResultsControllerDelegate> {
     
     MKMapView *mapView;
     NSMutableArray *mapAnnotations;
     UIBarButtonItem *btnUser;
+    NSFetchedResultsController *fetchedResultsController;
+    
 }
 
 @property (nonatomic, retain) MKMapView *mapView;
 @property (nonatomic, retain) NSMutableArray *mapAnnotations;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
 @end
