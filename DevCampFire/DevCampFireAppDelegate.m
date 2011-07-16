@@ -7,6 +7,7 @@
 //
 
 #import "DevCampFireAppDelegate.h"
+#import "RootViewController.h"
 #import <RestKit/RestKit.h>
 #import <RestKit/CoreData/CoreData.h>
 
@@ -14,16 +15,24 @@
 
 
 @synthesize window=_window;
-
 @synthesize managedObjectContext=__managedObjectContext;
-
 @synthesize managedObjectModel=__managedObjectModel;
-
 @synthesize persistentStoreCoordinator=__persistentStoreCoordinator;
+@synthesize viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    RootViewController *rootViewController = [[RootViewController alloc] init];
+	//rootViewController.managedObjectContext = self.managedObjectContext;
+	UINavigationController* vC = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    
+	[self setViewController:vC];
+	[vC release];
+	vC = nil;
+    
     // Override point for customization after application launch.
+    [self.window addSubview: [[self viewController] view]];
     [self.window makeKeyAndVisible];
     return YES;
 }

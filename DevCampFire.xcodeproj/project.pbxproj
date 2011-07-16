@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E3238D013D210A00023D633 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3238CF13D210A00023D633 /* RootViewController.m */; };
 		2EA510AA13D1EBEF00CAA8E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA510A913D1EBEF00CAA8E6 /* UIKit.framework */; };
 		2EA510AC13D1EBEF00CAA8E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA510AB13D1EBEF00CAA8E6 /* Foundation.framework */; };
 		2EA510AE13D1EBEF00CAA8E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA510AD13D1EBEF00CAA8E6 /* CoreGraphics.framework */; };
@@ -23,6 +24,7 @@
 		2EA510D413D1EBEF00CAA8E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EA510D213D1EBEF00CAA8E6 /* InfoPlist.strings */; };
 		2EA510D713D1EBEF00CAA8E6 /* DevCampFireTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 2EA510D613D1EBEF00CAA8E6 /* DevCampFireTests.h */; };
 		2EA510D913D1EBEF00CAA8E6 /* DevCampFireTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA510D813D1EBEF00CAA8E6 /* DevCampFireTests.m */; };
+		2ECB467013D2110800D5B13E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ECB466F13D2110800D5B13E /* MapKit.framework */; };
 		3D2B074613D1F48D00014D10 /* libRestKitCoreData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B073F13D1F48D00014D10 /* libRestKitCoreData.a */; };
 		3D2B074713D1F48E00014D10 /* libRestKitJSONParserJSONKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B074013D1F48D00014D10 /* libRestKitJSONParserJSONKit.a */; };
 		3D2B074813D1F48E00014D10 /* libRestKitJSONParserSBJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B074113D1F48D00014D10 /* libRestKitJSONParserSBJSON.a */; };
@@ -124,6 +126,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E3238CE13D210A00023D633 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		2E3238CF13D210A00023D633 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		2EA510A513D1EBEF00CAA8E6 /* DevCampFire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevCampFire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EA510A913D1EBEF00CAA8E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2EA510AB13D1EBEF00CAA8E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -143,6 +147,7 @@
 		2EA510D513D1EBEF00CAA8E6 /* DevCampFireTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DevCampFireTests-Prefix.pch"; sourceTree = "<group>"; };
 		2EA510D613D1EBEF00CAA8E6 /* DevCampFireTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DevCampFireTests.h; sourceTree = "<group>"; };
 		2EA510D813D1EBEF00CAA8E6 /* DevCampFireTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DevCampFireTests.m; sourceTree = "<group>"; };
+		2ECB466F13D2110800D5B13E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3D2B071513D1F3C900014D10 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		3D2B073F13D1F48D00014D10 /* libRestKitCoreData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRestKitCoreData.a; sourceTree = SOURCE_ROOT; };
 		3D2B074013D1F48D00014D10 /* libRestKitJSONParserJSONKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRestKitJSONParserJSONKit.a; sourceTree = SOURCE_ROOT; };
@@ -163,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ECB467013D2110800D5B13E /* MapKit.framework in Frameworks */,
 				3D2B075213D1F4BF00014D10 /* CFNetwork.framework in Frameworks */,
 				2EA510B013D1EBEF00CAA8E6 /* CoreData.framework in Frameworks */,
 				3D2B075313D1F4BF00014D10 /* libxml2.dylib in Frameworks */,
@@ -178,6 +184,7 @@
 				2EA510AA13D1EBEF00CAA8E6 /* UIKit.framework in Frameworks */,
 				2EA510AC13D1EBEF00CAA8E6 /* Foundation.framework in Frameworks */,
 				2EA510AE13D1EBEF00CAA8E6 /* CoreGraphics.framework in Frameworks */,
+				2EA510B013D1EBEF00CAA8E6 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,18 +205,6 @@
 		2EA5109A13D1EBEE00CAA8E6 = {
 			isa = PBXGroup;
 			children = (
-				3D2B074D13D1F4BF00014D10 /* CFNetwork.framework */,
-				3D2B074E13D1F4BF00014D10 /* CoreData.framework */,
-				3D2B074F13D1F4BF00014D10 /* libxml2.dylib */,
-				3D2B075013D1F4BF00014D10 /* MobileCoreServices.framework */,
-				3D2B075113D1F4BF00014D10 /* SystemConfiguration.framework */,
-				3D2B073F13D1F48D00014D10 /* libRestKitCoreData.a */,
-				3D2B074013D1F48D00014D10 /* libRestKitJSONParserJSONKit.a */,
-				3D2B074113D1F48D00014D10 /* libRestKitJSONParserSBJSON.a */,
-				3D2B074213D1F48D00014D10 /* libRestKitJSONParserYAJL.a */,
-				3D2B074313D1F48D00014D10 /* libRestKitNetwork.a */,
-				3D2B074413D1F48D00014D10 /* libRestKitObjectMapping.a */,
-				3D2B074513D1F48D00014D10 /* libRestKitSupport.a */,
 				2EA510B113D1EBEF00CAA8E6 /* DevCampFire */,
 				2EA510CF13D1EBEF00CAA8E6 /* DevCampFireTests */,
 				2EA510A813D1EBEF00CAA8E6 /* Frameworks */,
@@ -230,6 +225,19 @@
 		2EA510A813D1EBEF00CAA8E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D2B074D13D1F4BF00014D10 /* CFNetwork.framework */,
+				3D2B074E13D1F4BF00014D10 /* CoreData.framework */,
+				3D2B074F13D1F4BF00014D10 /* libxml2.dylib */,
+				3D2B075013D1F4BF00014D10 /* MobileCoreServices.framework */,
+				3D2B075113D1F4BF00014D10 /* SystemConfiguration.framework */,
+				3D2B073F13D1F48D00014D10 /* libRestKitCoreData.a */,
+				3D2B074013D1F48D00014D10 /* libRestKitJSONParserJSONKit.a */,
+				3D2B074113D1F48D00014D10 /* libRestKitJSONParserSBJSON.a */,
+				3D2B074213D1F48D00014D10 /* libRestKitJSONParserYAJL.a */,
+				3D2B074313D1F48D00014D10 /* libRestKitNetwork.a */,
+				3D2B074413D1F48D00014D10 /* libRestKitObjectMapping.a */,
+				3D2B074513D1F48D00014D10 /* libRestKitSupport.a */,
+				2ECB466F13D2110800D5B13E /* MapKit.framework */,
 				2EA510A913D1EBEF00CAA8E6 /* UIKit.framework */,
 				2EA510AB13D1EBEF00CAA8E6 /* Foundation.framework */,
 				2EA510AD13D1EBEF00CAA8E6 /* CoreGraphics.framework */,
@@ -241,6 +249,8 @@
 		2EA510B113D1EBEF00CAA8E6 /* DevCampFire */ = {
 			isa = PBXGroup;
 			children = (
+				2E3238CE13D210A00023D633 /* RootViewController.h */,
+				2E3238CF13D210A00023D633 /* RootViewController.m */,
 				2EA510BA13D1EBEF00CAA8E6 /* DevCampFireAppDelegate.h */,
 				2EA510BB13D1EBEF00CAA8E6 /* DevCampFireAppDelegate.m */,
 				2EA510BD13D1EBEF00CAA8E6 /* MainWindow.xib */,
@@ -485,6 +495,7 @@
 				2EA510B913D1EBEF00CAA8E6 /* main.m in Sources */,
 				2EA510BC13D1EBEF00CAA8E6 /* DevCampFireAppDelegate.m in Sources */,
 				2EA510C213D1EBEF00CAA8E6 /* DevCampFire.xcdatamodeld in Sources */,
+				2E3238D013D210A00023D633 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
