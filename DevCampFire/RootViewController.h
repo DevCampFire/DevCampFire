@@ -16,6 +16,7 @@
     NSMutableArray *mapAnnotations;
     UIBarButtonItem *btnUser;
     NSFetchedResultsController *fetchedResultsController;
+    NSMutableArray *allEvents;
     
 }
 
@@ -23,5 +24,6 @@
 @property (nonatomic, retain) NSMutableArray *mapAnnotations;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, retain) NSMutableArray *allEvents;
 
 @end

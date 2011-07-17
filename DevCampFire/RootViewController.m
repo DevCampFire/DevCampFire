@@ -15,7 +15,7 @@
 
 @implementation RootViewController
 
-@synthesize mapView, mapAnnotations, managedObjectContext, fetchedResultsController;
+@synthesize mapView, mapAnnotations, managedObjectContext, fetchedResultsController, allEvents;
 
 #pragma mark -
 
@@ -91,7 +91,7 @@
     [self.view addSubview:toolbar];
     
     
-    NSMutableArray *allEvents = [[self.fetchedResultsController fetchedObjects] mutableCopy];
+    allEvents = [[self.fetchedResultsController fetchedObjects] mutableCopy];
     
     //NSLog(@"%d", [allEvents count]);
 
@@ -101,8 +101,9 @@
         
         MapAnnotation *mapAnnotation = [[MapAnnotation alloc] init];
         mapAnnotation.event = event;
+        mapAnnotation.tag = [NSNumber numberWithInt:i];
         
-        NSLog(@"%d", [[event.projects allObjects] count]);
+        //NSLog(@"%d", [[event.projects allObjects] count]);
         
         [self.mapView addAnnotation:mapAnnotation];
     }
@@ -266,9 +267,10 @@
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     
-    //MapAnnotation *mapAnnotation = view.annotation;
-    
+    MapAnnotation *mapAnnotation = view.annotation;
+
     EventDetailViewController *eventDetailViewController = [[EventDetailViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    [eventDetailViewController setEvent:[allEvents objectAtIndex:[mapAnnotation.tag intValue]]];
     [self.navigationController pushViewController:eventDetailViewController animated:YES];
     [eventDetailViewController release];
 }
