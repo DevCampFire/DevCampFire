@@ -1,26 +1,29 @@
 //
-//  EventDetailViewController.m
+//  ProjectDetailViewController.m
 //  DevCampFire
 //
-//  Created by Samuel on 7/16/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Samuel Tremblay on 7/16/11.
+//  Copyright 2011 Nurun Inc. All rights reserved.
 //
 
-#import "EventDetailViewController.h"
 #import "ProjectDetailViewController.h"
-#import "SVWebViewController.h"
-#import "DCProject.h"
+#import "ParticipantDetailViewController.h"
+#import "DCParticipant.h"
 
-@implementation EventDetailViewController
+#define FONT_SIZE 16.0f
+#define CELL_CONTENT_WIDTH 700.0f
+#define CELL_CONTENT_MARGIN 0.0f
+#define CONSTANT_CONTENT_SIZE 0.0f
 
-@synthesize managedObjectContext, event;
+@implementation ProjectDetailViewController
+
+@synthesize project;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        
         
     }
     return self;
@@ -45,11 +48,13 @@
 {
     [super viewDidLoad];
 
-    //[self addHeaderAndFooter];
-    
-
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+ 
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self addHeaderAndFooter];
 }
-
 
 - (void)viewDidUnload
 {
@@ -86,7 +91,6 @@
 
 #pragma mark - Table view data source
 
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
@@ -95,20 +99,46 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+
     if (section == 0) {
         return 1;
     }
     else {
-        
-        return [[event.projects allObjects] count]; //TODO: make this dynamic fetching project entities
+        // Return the number of rows in the section.
+        return [[project.participants allObjects] count];
     }
-    // Return the number of rows in the section.
-}
--(CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section
-{
-        return 40;
+
 }
 
+-(CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 40;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    CGFloat cheight = 0;
+    
+    if (indexPath.section == 0) {
+        
+        NSString *text = project.detail;
+        //NSLog(@"%@", text);
+        
+        CGSize constraint = CGSizeMake(CELL_CONTENT_WIDTH - (CELL_CONTENT_MARGIN * 2), 20000.0f);
+        
+        CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:FONT_SIZE] constrainedToSize:constraint lineBreakMode:UILineBreakModeWordWrap];
+        
+        CGFloat height = MAX(size.height, 44.0f);
+        
+        cheight = height + (CELL_CONTENT_MARGIN * 2) + CONSTANT_CONTENT_SIZE;
+        //NSLog(@"%f", height);
+    }
+    if (indexPath.section == 1) {
+        cheight = 50;
+    }
+    
+    return cheight;
+}
 
 -(CGFloat)tableView:(UITableView*)tableView heightForFooterInSection:(NSInteger)section
 {
@@ -129,10 +159,10 @@
     title.backgroundColor = [UIColor clearColor];
     
     if (section == 0) {
-        title.text = @"Event Details";
+        title.text = @"Project Details";
     }
     if (section == 1) {
-        title.text = @"Projects";
+        title.text = @"Participants";
     }
     
     [headerView addSubview:backgroundImage];
@@ -155,10 +185,41 @@
         if (cell == nil) {
             cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
         }
+
+        UIView *backView = [[[UIView alloc] initWithFrame:CGRectZero] autorelease];
+        backView.backgroundColor = [UIColor clearColor];
+        cell.backgroundView = backView;
         
-        cell.textLabel.text = @"Event Details";
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        UILabel *review = [[UILabel alloc] initWithFrame:CGRectZero];
+        review.backgroundColor = [UIColor clearColor];
+        [review setLineBreakMode:UILineBreakModeTailTruncation];
+        [review setMinimumFontSize:FONT_SIZE];
+        [review setNumberOfLines:0];
+        [review setFont:[UIFont systemFontOfSize:FONT_SIZE]];
+        [review setTag:1];
+        
+        //[[review layer] setBorderWidth:2.0f];
+        
+        [[cell contentView] addSubview:review];
+        
+        NSString *text = project.detail;
+        
+        CGSize constraint = CGSizeMake(CELL_CONTENT_WIDTH - (CELL_CONTENT_MARGIN * 2), 20000.0f);
+        
+        CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:FONT_SIZE] constrainedToSize:constraint lineBreakMode:UILineBreakModeWordWrap];
+        
+        if (!review)
+            review = (UILabel*)[cell viewWithTag:1];
+        
+        [review setText:text];
+        [review setFrame:CGRectMake(CELL_CONTENT_MARGIN, CELL_CONTENT_MARGIN + CONSTANT_CONTENT_SIZE, CELL_CONTENT_WIDTH - (CELL_CONTENT_MARGIN * 2), MAX(size.height, 44.0f))];
+        [review release];
+        review = nil;
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
+        return cell;
         
         return cell;
     }
@@ -171,11 +232,12 @@
             cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
         }
         
-        DCProject *project = [[event.projects allObjects] objectAtIndex:indexPath.row];
+        // Configure the cell...
         
+        DCParticipant *participant = [[project.participants allObjects] objectAtIndex:indexPath.row];
         
         // Configure the cell...
-        cell.textLabel.text = project.name;
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", participant.firstName, participant.lastName];
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
@@ -183,7 +245,6 @@
     }
 
 }
-
 
 #pragma mark - Table view delegate
 
@@ -193,28 +254,30 @@
     
     if (indexPath.section == 0) {
         
-        SVWebViewController *webViewController = [[SVWebViewController alloc] initWithAddress:event.siteURL];
-        [self.navigationController pushViewController:webViewController animated:YES];
-        [webViewController release];
     }
     else {
         
-        ProjectDetailViewController *projectDetailViewController = [[ProjectDetailViewController alloc] initWithStyle:UITableViewStyleGrouped];
-        [projectDetailViewController setProject:[[event.projects allObjects] objectAtIndex:indexPath.row]];
-        [self.navigationController pushViewController:projectDetailViewController animated:YES];
-        [projectDetailViewController release];
     }
-
 }
 
 - (void) addHeaderAndFooter
 {
+    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, -20)];
+    header.backgroundColor = [UIColor clearColor];
     
-    UIView *footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 0)];
+    UIView *footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
     footer.backgroundColor = [UIColor clearColor];
+    
+    UILabel *tags = [[UILabel alloc] initWithFrame:CGRectMake(40, 20, self.view.bounds.size.width-80, 20)];
+    tags.textColor = [UIColor grayColor];
+    tags.backgroundColor = [UIColor clearColor];
+    tags.text = project.tags;
+    [footer addSubview:tags];
+    
     
     //[self.tableView setTableHeaderView:header];
     [self.tableView setTableFooterView:footer];
+    [header release];
     [footer release];
 }
 

@@ -22,4 +22,9 @@
 @property (nonatomic, retain) DCEvent * event;
 @property (nonatomic, retain) NSSet* participants;
 
+- (void)addParticipantsObject:(NSManagedObject *)value;
+- (void)removeParticipantsObject:(NSManagedObject *)value;
+- (void)addParticipants:(NSSet *)value;
+- (void)removeParticipants:(NSSet *)value;
+
 @end

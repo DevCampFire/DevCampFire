@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DCEvent.h"
 
-
-@interface EventDetailViewController : UITableViewController <NSFetchedResultsControllerDelegate> {
+@interface EventDetailViewController : UITableViewController {
     
-    NSFetchedResultsController *fetchedResultsController;
+    DCEvent *event;
 }
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, retain) DCEvent *event;
 
 - (void) addHeaderAndFooter;
 
