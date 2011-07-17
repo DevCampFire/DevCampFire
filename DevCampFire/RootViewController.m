@@ -9,6 +9,8 @@
 #import "RootViewController.h"
 #import "MapAnnotation.h"
 #import "EventDetailViewController.h"
+#import "ProfileViewController.h"
+#import "DevCampFireAppDelegate.h"
 #import "DCEvent.h"
 
 @implementation RootViewController
@@ -74,11 +76,12 @@
     toolbar.frame = CGRectMake(0, mapView.bounds.size.height - toolbarHeight - 44, self.view.bounds.size.width, toolbarHeight);
     [self.view addSubview:toolbar];
     
-    btnUser = [[UIBarButtonItem alloc] initWithTitle:@"Sign In" 
+    BOOL loggedIn = ((DevCampFireAppDelegate*)[[UIApplication sharedApplication] delegate]).participant != nil;
+    btnUser = [[UIBarButtonItem alloc] initWithTitle:loggedIn ? @"Profile": @"Sign In"
                                                              style:UIBarButtonItemStyleBordered 
                                                             target:self 
                                                             action:@selector(buttonsActions:)];
-    btnUser.tag = 0;
+    btnUser.tag = loggedIn ? 1 : 0;
     
     UIBarButtonItem	*flex = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
@@ -144,6 +147,14 @@
             
             // Clean up resources
             [signInView release];
+            
+            break;
+        }
+        case 1:
+        {
+            ProfileViewController *profileViewController = [[ProfileViewController alloc] init];
+            [self.navigationController pushViewController:profileViewController animated:YES];
+            [profileViewController release];
             
             break;
         }
@@ -277,6 +288,11 @@
 }
 
 - (void)didFinish:(UIViewController *)view {
+    
+    BOOL loggedIn = ((DevCampFireAppDelegate*)[[UIApplication sharedApplication] delegate]).participant != nil;
+    btnUser.title = loggedIn ? @"Profile" : @"Sign In";
+    btnUser.tag = loggedIn ? 1 : 0;
+    
     [self dismissModalViewControllerAnimated:true];
 }
 

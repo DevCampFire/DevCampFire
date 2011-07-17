@@ -8,6 +8,8 @@
 
 #import "SignInViewController.h"
 #import "RegisterViewController.h"
+#import "DCParticipant.h"
+#import "DevCampFireAppDelegate.h"
 
 @implementation SignInViewController
 @synthesize delegate;
@@ -71,6 +73,11 @@
 }
 
 - (IBAction) doSignIn:(id)sender {
+    
+    DCParticipant *currentParticipant = [[DCParticipant alloc] init];
+    ((DevCampFireAppDelegate*)[[UIApplication sharedApplication] delegate]).participant = currentParticipant;
+    [currentParticipant release];
+    
     [delegate didFinish:self];
 }
 

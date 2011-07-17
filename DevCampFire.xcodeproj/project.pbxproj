@@ -42,6 +42,12 @@
 		3D2B075313D1F4BF00014D10 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B074F13D1F4BF00014D10 /* libxml2.dylib */; };
 		3D2B075413D1F4BF00014D10 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B075013D1F4BF00014D10 /* MobileCoreServices.framework */; };
 		3D2B075513D1F4BF00014D10 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B075113D1F4BF00014D10 /* SystemConfiguration.framework */; };
+		3D8DC2AB13D259B000A59BB7 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D8DC2AD13D259B000A59BB7 /* RegisterViewController.xib */; };
+		3D8DC2B113D261E800A59BB7 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8DC2AF13D261E800A59BB7 /* ProfileViewController.m */; };
+		3D8DC2B213D261E800A59BB7 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D8DC2B013D261E800A59BB7 /* ProfileViewController.xib */; };
+		3D8DC2B613D2748D00A59BB7 /* SpecialitySelectorVIewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8DC2B413D2748C00A59BB7 /* SpecialitySelectorVIewController.m */; };
+		3D8DC2B713D2748D00A59BB7 /* SpecialitySelectorVIewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D8DC2B513D2748C00A59BB7 /* SpecialitySelectorVIewController.xib */; };
+		3D8DC2B913D27CE600A59BB7 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8DC2B813D27CE600A59BB7 /* check.png */; };
 		3D9DD9A713D24043009B0C55 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9DD9A613D24043009B0C55 /* CoreLocation.framework */; };
 		3D9DD9A913D240CD009B0C55 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9DD9A813D240CD009B0C55 /* AddressBook.framework */; };
 		3D9DD9AD13D24472009B0C55 /* ChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9DD9AB13D24472009B0C55 /* ChoiceViewController.m */; };
@@ -49,7 +55,6 @@
 		3DE6692913D215FE005B154F /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6692713D215FE005B154F /* SignInViewController.m */; };
 		3DE6692A13D215FE005B154F /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE6692813D215FE005B154F /* SignInViewController.xib */; };
 		3DE6692E13D218C9005B154F /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6692C13D218C9005B154F /* RegisterViewController.m */; };
-		3DE6692F13D218C9005B154F /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE6692D13D218C9005B154F /* RegisterViewController.xib */; };
 		BFD59B2F13D218FA00BEA83C /* DevCampFireBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD59B2B13D218FA00BEA83C /* DevCampFireBlack.png */; };
 		BFD59B3013D218FA00BEA83C /* DevCampFireBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD59B2C13D218FA00BEA83C /* DevCampFireBlue.png */; };
 		BFD59B3113D218FA00BEA83C /* DevCampFirePurple.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD59B2D13D218FA00BEA83C /* DevCampFirePurple.png */; };
@@ -192,6 +197,14 @@
 		3D2B074F13D1F4BF00014D10 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		3D2B075013D1F4BF00014D10 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3D2B075113D1F4BF00014D10 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3D8DC2AC13D259B000A59BB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RegisterViewController.xib; sourceTree = "<group>"; };
+		3D8DC2AE13D261E800A59BB7 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		3D8DC2AF13D261E800A59BB7 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		3D8DC2B013D261E800A59BB7 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		3D8DC2B313D2748C00A59BB7 /* SpecialitySelectorVIewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialitySelectorVIewController.h; sourceTree = "<group>"; };
+		3D8DC2B413D2748C00A59BB7 /* SpecialitySelectorVIewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialitySelectorVIewController.m; sourceTree = "<group>"; };
+		3D8DC2B513D2748C00A59BB7 /* SpecialitySelectorVIewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpecialitySelectorVIewController.xib; sourceTree = "<group>"; };
+		3D8DC2B813D27CE600A59BB7 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		3D9DD9A613D24043009B0C55 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3D9DD9A813D240CD009B0C55 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		3D9DD9AA13D24471009B0C55 /* ChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceViewController.h; sourceTree = "<group>"; };
@@ -202,7 +215,6 @@
 		3DE6692813D215FE005B154F /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		3DE6692B13D218C9005B154F /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		3DE6692C13D218C9005B154F /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		3DE6692D13D218C9005B154F /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		BFD59B2B13D218FA00BEA83C /* DevCampFireBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevCampFireBlack.png; sourceTree = "<group>"; };
 		BFD59B2C13D218FA00BEA83C /* DevCampFireBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevCampFireBlue.png; sourceTree = "<group>"; };
 		BFD59B2D13D218FA00BEA83C /* DevCampFirePurple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevCampFirePurple.png; sourceTree = "<group>"; };
@@ -337,7 +349,13 @@
 				3DE6692813D215FE005B154F /* SignInViewController.xib */,
 				3DE6692B13D218C9005B154F /* RegisterViewController.h */,
 				3DE6692C13D218C9005B154F /* RegisterViewController.m */,
-				3DE6692D13D218C9005B154F /* RegisterViewController.xib */,
+				3D8DC2AD13D259B000A59BB7 /* RegisterViewController.xib */,
+				3D8DC2AE13D261E800A59BB7 /* ProfileViewController.h */,
+				3D8DC2AF13D261E800A59BB7 /* ProfileViewController.m */,
+				3D8DC2B013D261E800A59BB7 /* ProfileViewController.xib */,
+				3D8DC2B313D2748C00A59BB7 /* SpecialitySelectorVIewController.h */,
+				3D8DC2B413D2748C00A59BB7 /* SpecialitySelectorVIewController.m */,
+				3D8DC2B513D2748C00A59BB7 /* SpecialitySelectorVIewController.xib */,
 			);
 			path = DevCampFire;
 			sourceTree = "<group>";
@@ -393,6 +411,7 @@
 		BFD59B2A13D218FA00BEA83C /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3D8DC2B813D27CE600A59BB7 /* check.png */,
 				2E7AE20013D2226400A9049D /* mapIcon.png */,
 				BFD59B2B13D218FA00BEA83C /* DevCampFireBlack.png */,
 				BFD59B2C13D218FA00BEA83C /* DevCampFireBlue.png */,
@@ -560,9 +579,12 @@
 				BFD59B3913D21A2200BEA83C /* DevCampFireGreen.png in Resources */,
 				BFD59B3A13D21A2200BEA83C /* DevCampFireOrange.png in Resources */,
 				3DE6692A13D215FE005B154F /* SignInViewController.xib in Resources */,
-				3DE6692F13D218C9005B154F /* RegisterViewController.xib in Resources */,
+				3D8DC2AB13D259B000A59BB7 /* RegisterViewController.xib in Resources */,
 				3D9DD9AE13D24472009B0C55 /* ChoiceViewController.xib in Resources */,
 				2E7AE20113D2226400A9049D /* mapIcon.png in Resources */,
+				3D8DC2B213D261E800A59BB7 /* ProfileViewController.xib in Resources */,
+				3D8DC2B713D2748D00A59BB7 /* SpecialitySelectorVIewController.xib in Resources */,
+				3D8DC2B913D27CE600A59BB7 /* check.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +632,8 @@
 				2E7AE21B13D22BA400A9049D /* DCEvent.m in Sources */,
 				2E7AE21E13D22BA400A9049D /* DCProject.m in Sources */,
 				2E7AE22113D22BA400A9049D /* DCParticipant.m in Sources */,
+				3D8DC2B113D261E800A59BB7 /* ProfileViewController.m in Sources */,
+				3D8DC2B613D2748D00A59BB7 /* SpecialitySelectorVIewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,6 +683,14 @@
 				2EA510D313D1EBEF00CAA8E6 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3D8DC2AD13D259B000A59BB7 /* RegisterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D8DC2AC13D259B000A59BB7 /* en */,
+			);
+			name = RegisterViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
