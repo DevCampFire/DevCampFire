@@ -457,7 +457,6 @@
 						<string key="NSFrame">{{270, 616}, {164, 37}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentVerticalAlignment">0</int>
@@ -518,11 +517,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">specialities</string>
+						<string key="label">specialitiesTextField</string>
 						<reference key="source" ref="841351856"/>
 						<reference key="destination" ref="846841869"/>
 					</object>
-					<int key="connectionID">27</int>
+					<int key="connectionID">28</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -728,7 +727,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">27</int>
+			<int key="maxID">28</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -737,13 +736,13 @@
 					<string key="className">ProfileViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">specialities</string>
+						<string key="NS.key.0">specialitiesTextField</string>
 						<string key="NS.object.0">UITextField</string>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">specialities</string>
+						<string key="NS.key.0">specialitiesTextField</string>
 						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">specialities</string>
+							<string key="name">specialitiesTextField</string>
 							<string key="candidateClassName">UITextField</string>
 						</object>
 					</object>

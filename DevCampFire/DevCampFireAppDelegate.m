@@ -47,11 +47,11 @@
     project.tags = @"#event managing #organization";
     project.detail = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt neque at justo volutpat id dignissim enim sollicitudin. Fusce tincidunt hendrerit tortor eu tempus. Quisque sit amet euismod nisi. Mauris porta vehicula ipsum vitae tempus. Mauris ac diam eget odio varius placerat. Praesent posuere sem at elit aliquam vel pulvinar quam sollicitudin. Aliquam semper volutpat massa eget dignissim. Nam nec nibh sed erat mollis interdum. Praesent tempus ligula risus. Morbi id lectus in nibh fringilla tempor. Aliquam sodales, dui vitae ornare viverra, enim urna faucibus ligula, et ullamcorper mauris felis non risus. Nulla facilisi.";
     
-    DCParticipant *participant = [NSEntityDescription insertNewObjectForEntityForName:@"DCParticipant" inManagedObjectContext:self.managedObjectContext];
-    participant.firstName = @"Hugo";
-    participant.lastName = @"Plante";
+    DCParticipant *participant1 = [NSEntityDescription insertNewObjectForEntityForName:@"DCParticipant" inManagedObjectContext:self.managedObjectContext];
+    participant1.firstName = @"Hugo";
+    participant1.lastName = @"Plante";
     
-    [project addParticipantsObject:participant];
+    [project addParticipantsObject:participant1];
     
     DCParticipant *participant2 = [NSEntityDescription insertNewObjectForEntityForName:@"DCParticipant" inManagedObjectContext:self.managedObjectContext];
     participant2.firstName = @"Samuel";
